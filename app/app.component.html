@@ -1,0 +1,203 @@
+<td-layout>
+  <td-navigation-drawer flex [sidenavTitle]="name" logo="teradata-dark" name="Firstname Lastname" email="firstname.lastname@company.com">
+    <mat-nav-list>
+      <a *ngFor="let item of routes" mat-list-item><mat-icon>{{item.icon}}</mat-icon>{{item.title}}</a>
+    </mat-nav-list>
+    <div td-navigation-drawer-menu>
+      <mat-nav-list>
+        <a *ngFor="let item of usermenu" mat-list-item><mat-icon>{{item.icon}}</mat-icon>{{item.title}}</a>
+      </mat-nav-list>
+    </div>
+  </td-navigation-drawer>
+  <td-layout-nav logo="teradata-dark" color="white" [toolbarTitle]="name" navigationRoute="/">
+    <button mat-icon-button td-menu-button tdLayoutToggle>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div td-toolbar-content layout="row" layout-align="start center" flex>
+      <span flex></span>
+      <a mat-icon-button matTooltip="Docs" matTooltipPosition="before" href="https://teradata.github.io/covalent/" target="_blank"><mat-icon>chrome_reader_mode</mat-icon></a>
+    </div>
+    <!-- router outlet goes here -->
+    <div style="min-height:800px" layout-gt-sm="row" tdMediaToggle="gt-sm" [mediaClasses]="['push-sm']" class="mat-content">
+      <div flex-gt-sm="60">
+        <mat-card>
+          <mat-card-title>Products Sales</mat-card-title>
+          <mat-card-subtitle>usage stats for our products</mat-card-subtitle>
+          <mat-divider></mat-divider>
+          <mat-card-content>
+            card content
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <a mat-button color="accent" class="text-upper">
+              <span>View More</span>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+        <mat-card tdMediaToggle="gt-sm" [mediaClasses]="['push-top']">
+          <mat-card-title>Customer Activity</mat-card-title>
+          <mat-card-subtitle>Recent activity from select members</mat-card-subtitle>
+          <mat-divider></mat-divider>
+          <mat-card-content>
+            card content
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <a mat-button color="accent" class="text-upper">
+              <span>View More</span>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div flex-gt-sm="40">
+        <mat-card>
+          <mat-card-title>Alerts</mat-card-title>
+          <mat-card-subtitle>Items requiring attention</mat-card-subtitle>
+          <mat-divider></mat-divider>
+          <mat-card-content>
+            card content
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <a mat-button color="accent" class="text-upper">
+              <span>View More</span>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+        <mat-card tdMediaToggle="gt-sm" [mediaClasses]="['push-top']">
+          <mat-card-title>Favorites</mat-card-title>
+          <mat-card-subtitle>Your favorite products</mat-card-subtitle>
+          <mat-divider></mat-divider>
+          <mat-card-content>
+            card content
+          </mat-card-content>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <a mat-button color="accent" class="text-upper">
+              <span>View More</span>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="pad pad-top-lg pad-bottom-none bgc-white">
+        <div layout-gt-xs="row">
+          <a layout-xs="row" layout-align="center center" flex-xs="100" href="https://teradata.com">
+            <img src="https://www.teradata.com/Teradata/Images/Rebrand/Teradata_logo-two_color.png" alt="Teradata" width="190" />
+          </a>
+          <div hide-xs flex-gt-xs="15" class="pad-sm">
+            <h4 class="mat-title text-upper text-md">Products</h4>
+            <div layout="column" class="mat-subheading-1">
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Teradata</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Vantage</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">IntelliCloud</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">All Products</a>
+            </div>
+          </div>
+          <div hide-xs flex-gt-xs="15" class="pad-sm">
+            <h4 class="mat-title text-upper text-md">Consulting</h4>
+            <div layout="column" class="mat-subheading-1">
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Consulting</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Managed Services</a>
+            </div>
+          </div>
+          <div hide-xs flex-gt-xs="15" class="pad-sm">
+            <h4 class="mat-title text-upper text-md">Outcomes</h4>
+            <div layout="column" class="mat-subheading-1">
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Business Outcomes</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Trends</a>
+            </div>
+          </div>
+          <div hide-xs flex-gt-xs="15" class="pad-sm">
+            <h4 class="mat-title text-upper text-md">Resources</h4>
+            <div layout="column" class="mat-subheading-1">
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Resource Library</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Support</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Certifications</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Teradata Education Network</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Teradata University Network</a>
+            </div>
+          </div>
+          <div hide-xs flex-gt-xs="15" class="pad-sm">
+            <h4 class="mat-title text-upper text-md">Company</h4>
+            <div layout="column" class="mat-subheading-1">
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">About Teradata</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Customers</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Partners</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Careers</a>
+              <a class="tc-td-slate-500 text-nodecoration push-top-sm push-bottom-sm" href="#">Contact Us</a>
+            </div>
+          </div>
+          <div flex class="pad-sm">
+            <div layout="row" layout-align="center center" class="pad-sm pad-top-none">
+              <a href="#" mat-icon-button color="accent">
+                <mat-icon style="height:18px; height:18px;">
+                  <svg id="icon-social-twitter" viewBox="0 0 32.695 26.515" enable-background="new 0 0 25.837 33.214" width="100%" height="100%">
+                    <path fill="currentColor" d="M32.676,3.175c-1.198,0.53-2.485,0.89-3.838,1.05c1.379-0.827,2.44-2.135,2.938-3.695c-1.29,0.765-2.719,1.322-4.241,1.621c-1.218-1.298-2.954-2.109-4.874-2.109c-3.688,0-6.679,2.991-6.679,6.678c0,0.524,0.059,1.032,0.173,1.521C10.605,7.964,5.684,5.305,2.389,1.265C1.815,2.251,1.485,3.398,1.485,4.623c0,2.316,1.179,4.362,2.972,5.558c-1.095-0.034-2.125-0.335-3.026-0.834c0,0.028,0,0.056,0,0.083c0,3.236,2.302,5.935,5.357,6.548c-0.561,0.152-1.149,0.234-1.76,0.234c-0.429,0-0.849-0.041-1.256-0.119c0.85,2.652,3.316,4.584,6.238,4.638c-2.285,1.792-5.165,2.858-8.294,2.858c-0.539,0-1.07-0.031-1.593-0.094c2.956,1.896,6.466,3.002,10.238,3.002c12.284,0,19-10.176,19-19.001c0-0.289-0.006-0.578-0.019-0.864C30.648,5.689,31.779,4.513,32.676,3.175z"></path>
+                  </svg>
+                </mat-icon>
+              </a>
+              <a href="#" mat-icon-button color="accent">
+                <mat-icon style="height:18px; height:18px;">
+                  <svg id="icon-social-facebook" viewBox="0 0 35 35" enable-background="new 0 0 35 35" width="100%" height="100%">
+                    <path fill="currentColor" d="M14.1,34.4V19H10v-5.6h4.1c0,0,0-2.3,0-4.7c0-3.7,2.4-7.1,8-7.1c2.2,0,3.9,0.2,3.9,0.2L25.8,7c0,0-1.7,0-3.5,0c-2,0-2.3,0.9-2.3,2.5c0,1.2,0-2.6,0,4.1h6L25.7,19H20v15.4L14.1,34.4L14.1,34.4z"></path>
+                  </svg>
+                </mat-icon>
+              </a>
+              <a href="#" mat-icon-button color="accent">
+                <mat-icon style="height:18px; height:18px;">
+                  <svg id="icon-social-linkedIn" viewBox="0 0 27.896 26.897" enable-background="new 0 0 27.896 26.897" width="100%" height="100%">
+                    <path id="path28_2_" inkscape:connector-curvature="0" fill="currentColor" d="M6.354,26.921V8.946H0.379v17.975H6.354z M3.367,6.491c2.083,0,3.381-1.38,3.381-3.105C6.708,1.622,5.45,0.281,3.407,0.281c-2.045,0-3.38,1.341-3.38,3.105c0,1.725,1.296,3.105,3.301,3.105H3.367L3.367,6.491z"></path>
+                    <path id="path30_2_" inkscape:connector-curvature="0" fill="currentColor" d="M9.659,26.921h5.975V16.884c0-0.538,0.037-1.075,0.198-1.459c0.431-1.073,1.413-2.186,3.064-2.186c2.159,0,3.027,1.649,3.027,4.065v9.616h5.972V16.613c0-5.52-2.947-8.089-6.877-8.089c-3.223,0-4.639,1.802-5.424,3.028h0.039V8.946H9.659C9.739,10.632,9.659,26.921,9.659,26.921L9.659,26.921z"></path>
+                  </svg>
+                </mat-icon>
+              </a>
+              <a href="#" mat-icon-button color="accent">
+                <mat-icon style="height:18px; height:18px;">
+                  <svg id="icon-social-google-plus" viewBox="0 0 40 26" enable-background="new 0 0 40 26" width="100%" height="100%">
+                    <path fill="currentColor" d="M25.9,11H12.2v4.7h8.6c-0.4,2.8-3,5.5-7.4,5.5c-4.7,0-8.5-3.7-8.5-8.3c0-4.6,3.8-8.3,8.5-8.3c2.1,0,4.1,0.7,5.6,2l0.5,0.5
+                        L23.1,4l-0.6-0.6C20,1.2,16.8,0,13.4,0C6,0,0,5.8,0,13c0,7.2,6,13,13.4,13C22.7,26,26,19.3,26,13c0-0.4,0-0.8-0.1-1.3
+                        C25.9,11.7,25.9,11,25.9,11z M36.6,11.4V8h-5.1v3.4H28v5.1h3.4V20h5.1v-3.4H40v-5.1H36.6z"></path>
+                  </svg>
+                </mat-icon>
+              </a>
+              <a href="#" mat-icon-button color="accent">
+                <mat-icon style="height:18px; height:18px;">
+                  <svg id="icon-social-youTube" viewBox="0 0 24 24" style="width: 24px; height: 24px;" width="100%" height="100%"><path fill="currentColor" d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
+                </mat-icon>
+              </a>
+              <a href="#" mat-icon-button color="accent">
+                <mat-icon style="height:18px; height:18px;">
+                  <svg id="icon-social-rss" viewBox="0 0 25 25" enable-background="new 0 0 25 25" width="100%" height="100%">
+                    <g fill="currentColor">
+                      <path d="M15.6,25h-1.2c0-7.9-6.4-14.4-14.4-14.4V9.4C8.6,9.4,15.6,16.4,15.6,25 M0,18.8V25h6.3C6.3,21.1,3.9,18.8,0,18.8"></path>
+                      <path d="M25,25h-1.3C23.8,11.9,13.1,1.3,0,1.3V0C13.8,0,25,11.2,25,25"></path>
+                    </g>
+                  </svg>
+                </mat-icon>
+              </a>
+            </div>
+            <div hide-xs layout="row" layout-align="end center" class="pad-sm">
+              <a class="tc-td-slate-500 text-nodecoration push-right-sm" href="#">News</a>
+              <a class="tc-td-slate-500 text-nodecoration push-right-sm" href="#">Blog</a>
+              <a class="tc-td-slate-500 text-nodecoration push-right-sm" href="#">Events</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div tdMediaToggle="xs" [mediaClasses]="['pad-xs']" class="pad bgc-grey-200 text-md" layout-gt-xs="row">
+        <div layout="row" layout-wrap layout-align="center center" tdMediaToggle="xs" [mediaClasses]="['text-center']">
+          <a class="tc-td-slate-700 text-nodecoration push-sm" href="#">Privacy</a>
+          <a class="tc-td-slate-700 text-nodecoration push-sm" href="#">Terms of Use</a>
+          <a class="tc-td-slate-700 text-nodecoration push-sm" href="#">Legal</a>
+          <a class="tc-td-slate-700 text-nodecoration push-sm" href="#">Support Policies</a>
+          <a class="tc-td-slate-700 text-nodecoration push-sm" href="#">Feedback</a>
+          <a class="tc-td-slate-700 text-nodecoration push-sm" href="#">Tracking Consent</a>
+          <a class="tc-td-slate-700 text-nodecoration push-sm" href="#">Careers</a>
+          <div flex-xs="100" class="tc-grey-600 push-sm">©2018 Teradata. All Rights Reserved</div>
+        </div>
+      </div>
+    </div>
+  </td-layout-nav>
+</td-layout>
